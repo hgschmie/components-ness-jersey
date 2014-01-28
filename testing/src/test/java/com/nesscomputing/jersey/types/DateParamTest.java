@@ -16,6 +16,7 @@
 package com.nesscomputing.jersey.types;
 
 import static org.junit.Assert.assertEquals;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -28,6 +29,17 @@ import com.google.inject.Inject;
 import com.google.inject.Key;
 import com.google.inject.servlet.GuiceFilter;
 
+import com.nesscomputing.config.Config;
+import com.nesscomputing.httpclient.HttpClient;
+import com.nesscomputing.httpclient.response.StringContentConverter;
+import com.nesscomputing.jersey.ServerBaseModule;
+import com.nesscomputing.lifecycle.junit.LifecycleRule;
+import com.nesscomputing.lifecycle.junit.LifecycleRunner;
+import com.nesscomputing.lifecycle.junit.LifecycleStatement;
+import com.nesscomputing.testing.IntegrationTestRule;
+import com.nesscomputing.testing.IntegrationTestRuleBuilder;
+import com.nesscomputing.testing.tweaked.TweakedModule;
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.junit.After;
@@ -36,20 +48,8 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import com.nesscomputing.config.Config;
-import com.nesscomputing.httpclient.HttpClient;
-import com.nesscomputing.httpclient.response.StringContentConverter;
-import com.nesscomputing.jersey.ServerBaseModule;
-import com.nesscomputing.jersey.types.DateParam;
-import com.nesscomputing.lifecycle.junit.LifecycleRule;
-import com.nesscomputing.lifecycle.junit.LifecycleRunner;
-import com.nesscomputing.lifecycle.junit.LifecycleStatement;
-import com.nesscomputing.testing.IntegrationTestRule;
-import com.nesscomputing.testing.IntegrationTestRuleBuilder;
-import com.nesscomputing.testing.lessio.AllowDNSResolution;
-import com.nesscomputing.testing.lessio.AllowNetworkAccess;
-import com.nesscomputing.testing.tweaked.TweakedModule;
+import org.kitei.testing.lessio.AllowDNSResolution;
+import org.kitei.testing.lessio.AllowNetworkAccess;
 
 @AllowNetworkAccess(endpoints= {"127.0.0.1:*"})
 @AllowDNSResolution

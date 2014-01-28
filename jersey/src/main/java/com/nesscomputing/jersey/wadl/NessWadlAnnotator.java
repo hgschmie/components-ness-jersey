@@ -31,9 +31,9 @@ import com.sun.jersey.api.model.AbstractResource;
 import com.sun.jersey.api.model.AbstractResourceMethod;
 import com.sun.research.ws.wadl.Method;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 import com.nesscomputing.logging.Log;
+
+import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * Ness-specific extensions to the Jersey-generated WADL

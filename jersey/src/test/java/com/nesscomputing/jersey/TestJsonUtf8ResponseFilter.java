@@ -18,11 +18,10 @@ package com.nesscomputing.jersey;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.sun.jersey.spi.container.ContainerResponse;
+
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.nesscomputing.jersey.JsonUtf8ResponseFilter;
-import com.sun.jersey.spi.container.ContainerResponse;
 
 public class TestJsonUtf8ResponseFilter
 {

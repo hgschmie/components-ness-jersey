@@ -31,10 +31,6 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
 import com.nesscomputing.config.Config;
 import com.nesscomputing.httpclient.HttpClient;
 import com.nesscomputing.httpclient.guice.HttpClientModule;
@@ -46,6 +42,10 @@ import com.nesscomputing.lifecycle.junit.LifecycleStatement;
 import com.nesscomputing.testing.IntegrationTestRule;
 import com.nesscomputing.testing.IntegrationTestRuleBuilder;
 import com.nesscomputing.testing.tweaked.TweakedModule;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 @RunWith(LifecycleRunner.class)
 public class TestExceptionMappingBinding

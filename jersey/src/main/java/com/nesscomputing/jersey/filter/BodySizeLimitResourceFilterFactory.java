@@ -22,6 +22,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.google.common.base.Joiner;
+import com.google.common.collect.Maps;
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import com.sun.jersey.api.model.AbstractMethod;
 import com.sun.jersey.spi.container.ContainerRequest;
 import com.sun.jersey.spi.container.ContainerRequestFilter;
@@ -29,17 +33,12 @@ import com.sun.jersey.spi.container.ContainerResponseFilter;
 import com.sun.jersey.spi.container.ResourceFilter;
 import com.sun.jersey.spi.container.ResourceFilterFactory;
 
-import com.google.common.base.Joiner;
-import com.google.common.collect.Maps;
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
-
-import org.apache.commons.configuration.AbstractConfiguration;
-import org.apache.commons.lang3.ObjectUtils;
-
 import com.nesscomputing.config.Config;
 import com.nesscomputing.jersey.util.MaxSizeInputStream;
 import com.nesscomputing.logging.Log;
+
+import org.apache.commons.configuration.AbstractConfiguration;
+import org.apache.commons.lang3.ObjectUtils;
 
 /**
  * A {@link ResourceFilterFactory} which discovers all resource methods.  If they take

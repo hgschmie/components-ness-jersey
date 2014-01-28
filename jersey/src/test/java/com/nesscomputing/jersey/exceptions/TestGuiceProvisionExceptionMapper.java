@@ -17,16 +17,15 @@ package com.nesscomputing.jersey.exceptions;
 
 import javax.ws.rs.core.Response;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import com.google.inject.Binder;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.ProvisionException;
 import com.google.inject.Stage;
-import com.nesscomputing.jersey.exceptions.GuiceProvisionExceptionMapper;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class TestGuiceProvisionExceptionMapper
 {

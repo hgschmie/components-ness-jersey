@@ -32,13 +32,13 @@ import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import com.nesscomputing.httpclient.HttpClient;
 import com.nesscomputing.httpclient.internal.HttpClientMethod;
 import com.nesscomputing.httpclient.response.Valid2xxContentConverter;
 import com.nesscomputing.httpclient.testing.TestingHttpClientBuilder;
+
+import org.junit.Before;
+import org.junit.Test;
 
 public class TestNessApiExceptionMapping
 {

@@ -22,10 +22,10 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.ext.ExceptionMapper;
 
+import com.google.common.collect.ImmutableMap;
+
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.log4j.MDC;
-
-import com.google.common.collect.ImmutableMap;
 
 /**
  * A generic base class to map an exception to a Ness response. This must be implemented by a concrete

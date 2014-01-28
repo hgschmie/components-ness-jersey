@@ -16,22 +16,11 @@
 package com.nesscomputing.jersey.wadl;
 
 import static org.junit.Assert.assertEquals;
-import nu.xom.Attribute;
-import nu.xom.Builder;
-import nu.xom.Document;
-import nu.xom.Element;
-import nu.xom.Elements;
-
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import com.google.inject.Inject;
 import com.google.inject.Key;
 import com.google.inject.servlet.GuiceFilter;
+
 import com.nesscomputing.httpclient.HttpClient;
 import com.nesscomputing.httpclient.response.StringContentConverter;
 import com.nesscomputing.httpclient.testing.CapturingHttpResponseHandler;
@@ -41,9 +30,22 @@ import com.nesscomputing.lifecycle.junit.LifecycleRunner;
 import com.nesscomputing.lifecycle.junit.LifecycleStatement;
 import com.nesscomputing.testing.IntegrationTestRule;
 import com.nesscomputing.testing.IntegrationTestRuleBuilder;
-import com.nesscomputing.testing.lessio.AllowDNSResolution;
-import com.nesscomputing.testing.lessio.AllowNetworkAccess;
 import com.nesscomputing.testing.tweaked.TweakedModule;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.kitei.testing.lessio.AllowDNSResolution;
+import org.kitei.testing.lessio.AllowNetworkAccess;
+
+import nu.xom.Attribute;
+import nu.xom.Builder;
+import nu.xom.Document;
+import nu.xom.Element;
+import nu.xom.Elements;
 
 @AllowNetworkAccess(endpoints= {"127.0.0.1:*"})
 @AllowDNSResolution

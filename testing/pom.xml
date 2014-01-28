@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.nesscomputing.components</groupId>
     <artifactId>ness-jersey-parent</artifactId>
-    <version>1.9.2-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>ness-jersey-testing</artifactId>
@@ -132,13 +132,6 @@
     <dependency>
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
-    </dependency>
-
-    <!-- Annotations used in the integration test builder -->
-    <dependency>
-      <groupId>com.nesscomputing.testing</groupId>
-      <artifactId>kawala-lessio</artifactId>
-      <scope>test</scope>
     </dependency>
 
     <dependency>
